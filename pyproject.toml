@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tableprobe"
+version = "0.1.0"
+description = "上课演示用的表探查库：打开 CSV、Parquet、SQLite、xlsx 和 MySQL，回答行数、列数和列角色。"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["duckdb>=1.1.0"]
+
+[project.urls]
+Homepage = "https://github.com/WangLaoShi/wanglaoshi-sql"
+Source = "https://github.com/WangLaoShi/wanglaoshi-sql"
+
+[project.optional-dependencies]
+mysql = []
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
